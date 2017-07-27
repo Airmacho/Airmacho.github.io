@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TRADIS</title>
+  <subtitle>Time And Relative Dimension in Space</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-07-27T09:42:00.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Will Wu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Rails Session</title>
+    <link href="http://yoursite.com/2013/07/13/rails-sessions/"/>
+    <id>http://yoursite.com/2013/07/13/rails-sessions/</id>
+    <published>2013-07-13T12:46:25.000Z</published>
+    <updated>2017-07-27T09:42:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/session_store.rb</span></div><div class="line">Rails.application.config.session_store <span class="symbol">:cookie_store</span>, <span class="symbol">key:</span> <span class="string">'_quiver_session'</span></div></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/cookies_serializer.rb</span></div><div class="line">Rails.application.config.action_dispatch.cookies_serializer = <span class="symbol">:json</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Rails stores session data inside a single cookie</li>
+<li>By default, the session data is turned into JSON</li>
+<li>Rails signs and encrypts the cookie</li>
+<li>The session key and serializer can be configured to be something different</li>
+</ul>
+<p>cookies are limited, only 4k(or ActionDispatch::Cookies::CookieOverflow)</p>
+<h3 id="How-do-you-keep-your-cookies-small"><a href="#How-do-you-keep-your-cookies-small" class="headerlink" title="How do you keep your cookies small?"></a>How do you keep your cookies small?</h3><ol>
+<li>Store the <code>data</code> in the cookie</li>
+<li>Store a <code>reference to the data</code> in the cookie</li>
+</ol>
+<h3 id="Creating-an-ActiveRecord-session"><a href="#Creating-an-ActiveRecord-session" class="headerlink" title="Creating an ActiveRecord session"></a>Creating an ActiveRecord session</h3><ol>
+<li>Generate a new random session id</li>
+<li>Turn the session hash into a string</li>
+<li>Save the id and data to a sessions table in your database</li>
+<li>Return the session id with Set-Cookie</li>
+</ol>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/session_store.rb</span></div><div class="line">Rails.application.config.session_store <span class="symbol">:active_record_store</span>, <span class="symbol">key:</span> <span class="string">'_quiver_session'</span></div></pre></td></tr></table></figure>
+<h3 id="Finding-an-ActiveRecord-session"><a href="#Finding-an-ActiveRecord-session" class="headerlink" title="Finding an ActiveRecord session"></a>Finding an ActiveRecord session</h3><ol>
+<li>Grab the session id out of the cookie</li>
+<li>Look up the session id in the database</li>
+<li>Grab the data associated with that id</li>
+<li><p>Turn the data back into the session hash</p>
+<ul>
+<li>CacheStore</li>
+<li>ActiveRecordStore</li>
+<li>RedisSessionStore</li>
+<li>MongoSessionStore</li>
+</ul>
+</li>
+</ol>
+<h4 id="Create-your-own-session-store"><a href="#Create-your-own-session-store" class="headerlink" title="Create your own session store"></a>Create your own session store</h4><ul>
+<li>find_session</li>
+<li>write_session</li>
+<li>delete_session</li>
+</ul>
+<h3 id="Two-kinds-of-session-store"><a href="#Two-kinds-of-session-store" class="headerlink" title="Two kinds of session store"></a>Two kinds of session store</h3><ul>
+<li>CookieStore: store all the data in the cookie</li>
+<li>Everything Else: store a pointer to data in the cookie</li>
+</ul>
+<h3 id="Which-session-store-is-right-for-you"><a href="#Which-session-store-is-right-for-you" class="headerlink" title="Which session store is right for you"></a>Which session store is right for you</h3><h5 id="Cookie-Store"><a href="#Cookie-Store" class="headerlink" title="Cookie Store"></a>Cookie Store</h5><p>pros</p>
+<ul>
+<li>No extra setup</li>
+<li>Syncs with the browser lifecycle<br>cons</li>
+<li>Can only store 4kb of data</li>
+<li>Risk of session relay attacks</li>
+</ul>
+<h5 id="CacheStore"><a href="#CacheStore" class="headerlink" title="CacheStore"></a>CacheStore</h5><p>pros</p>
+<ul>
+<li>You probably already have a cache</li>
+<li>Built into Rails</li>
+<li>Fast–usually kept in memory<br>cons</li>
+<li>Sessions and cache fight for space – sessions can get kicked out</li>
+<li>Reset your cache expires all sessions</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight ruby&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;co
+    
+    </summary>
+    
+    
+      <category term="Ruby" scheme="http://yoursite.com/tags/Ruby/"/>
+    
+      <category term="Rails" scheme="http://yoursite.com/tags/Rails/"/>
+    
+  </entry>
+  
+</feed>

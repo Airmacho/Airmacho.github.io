@@ -77,10 +77,12 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Ruby,Rails," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="TRADIS" type="application/atom+xml" />
@@ -95,16 +97,18 @@
 
 
 
-<meta name="description" content="To Infinity and Beyond">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TRADIS">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="12# config/initializers/session_store.rbRails.application.config.session_store :cookie_store, key: &apos;_quiver_session&apos; 12# config/initializers/cookies_serializer.rbRails.application.config.action_dispat">
+<meta name="keywords" content="Ruby,Rails">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rails Session">
+<meta property="og:url" content="http://yoursite.com/2013/07/13/rails-sessions/index.html">
 <meta property="og:site_name" content="TRADIS">
-<meta property="og:description" content="To Infinity and Beyond">
+<meta property="og:description" content="12# config/initializers/session_store.rbRails.application.config.session_store :cookie_store, key: &apos;_quiver_session&apos; 12# config/initializers/cookies_serializer.rbRails.application.config.action_dispat">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-07-27T09:42:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TRADIS">
-<meta name="twitter:description" content="To Infinity and Beyond">
+<meta name="twitter:title" content="Rails Session">
+<meta name="twitter:description" content="12# config/initializers/session_store.rbRails.application.config.session_store :cookie_store, key: &apos;_quiver_session&apos; 12# config/initializers/cookies_serializer.rbRails.application.config.action_dispat">
 
 
 
@@ -132,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2013/07/13/rails-sessions/"/>
 
 
 
 
 
-  <title>TRADIS</title>
+  <title>Rails Session | TRADIS</title>
   
 
 
@@ -163,9 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,9 +250,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2013/07/13/rails-sessions/" itemprop="url">Rails Session</a></h1>
+          <h1 class="post-title" itemprop="name headline">Rails Session</h1>
         
 
         <div class="post-meta">
@@ -325,9 +325,7 @@
       
 
       
-        
-          
-            <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/session_store.rb</span></div><div class="line">Rails.application.config.session_store <span class="symbol">:cookie_store</span>, <span class="symbol">key:</span> <span class="string">'_quiver_session'</span></div></pre></td></tr></table></figure>
+        <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/session_store.rb</span></div><div class="line">Rails.application.config.session_store <span class="symbol">:cookie_store</span>, <span class="symbol">key:</span> <span class="string">'_quiver_session'</span></div></pre></td></tr></table></figure>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/cookies_serializer.rb</span></div><div class="line">Rails.application.config.action_dispatch.cookies_serializer = <span class="symbol">:json</span></div></pre></td></tr></table></figure>
 <ul>
 <li>Rails stores session data inside a single cookie</li>
@@ -385,42 +383,58 @@
 <li>Reset your cache expires all sessions</li>
 </ul>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Ruby/" rel="tag"># Ruby</a>
+          
+            <a href="/tags/Rails/" rel="tag"># Rails</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -428,6 +442,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -448,8 +466,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -509,6 +536,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-do-you-keep-your-cookies-small"><span class="nav-number">1.</span> <span class="nav-text">How do you keep your cookies small?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-an-ActiveRecord-session"><span class="nav-number">2.</span> <span class="nav-text">Creating an ActiveRecord session</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Finding-an-ActiveRecord-session"><span class="nav-number">3.</span> <span class="nav-text">Finding an ActiveRecord session</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Create-your-own-session-store"><span class="nav-number">3.1.</span> <span class="nav-text">Create your own session store</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Two-kinds-of-session-store"><span class="nav-number">4.</span> <span class="nav-text">Two kinds of session store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Which-session-store-is-right-for-you"><span class="nav-number">5.</span> <span class="nav-text">Which session store is right for you</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Cookie-Store"><span class="nav-number">5.0.1.</span> <span class="nav-text">Cookie Store</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CacheStore"><span class="nav-number">5.0.2.</span> <span class="nav-text">CacheStore</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -611,10 +654,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
