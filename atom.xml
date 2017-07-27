@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-27T09:42:00.000Z</updated>
+  <updated>2017-07-27T09:48:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2013/07/13/rails-sessions/"/>
     <id>http://yoursite.com/2013/07/13/rails-sessions/</id>
     <published>2013-07-13T12:46:25.000Z</published>
-    <updated>2017-07-27T09:42:00.000Z</updated>
+    <updated>2017-07-27T09:48:24.000Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/session_store.rb</span></div><div class="line">Rails.application.config.session_store <span class="symbol">:cookie_store</span>, <span class="symbol">key:</span> <span class="string">'_quiver_session'</span></div></pre></td></tr></table></figure>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/cookies_serializer.rb</span></div><div class="line">Rails.application.config.action_dispatch.cookies_serializer = <span class="symbol">:json</span></div></pre></td></tr></table></figure>
