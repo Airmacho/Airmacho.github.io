@@ -77,10 +77,12 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Ruby,Rails," />
+  <meta name="keywords" content="Concurrency,Elixir," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="TRADIS" type="application/atom+xml" />
@@ -95,18 +97,18 @@
 
 
 
-<meta name="description" content="12# config/initializers/session_store.rbRails.application.config.session_store :cookie_store, key: &apos;_quiver_session&apos; 12# config/initializers/cookies_serializer.rbRails.application.config.action_dispat">
-<meta name="keywords" content="Ruby,Rails">
+<meta name="description" content="ProcessesErlang is a concurrency-oriented programming language. Its unit of concurrency is the process (which has nothing to do with an Operating System process).Processes share no memory with one ano">
+<meta name="keywords" content="Concurrency,Elixir">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Rails Session">
-<meta property="og:url" content="http://yoursite.com/2017/05/11/rails-sessions/index.html">
+<meta property="og:title" content="Ping Pong Elixir">
+<meta property="og:url" content="http://yoursite.com/2017/07/12/ping_pong_elixir/index.html">
 <meta property="og:site_name" content="TRADIS">
-<meta property="og:description" content="12# config/initializers/session_store.rbRails.application.config.session_store :cookie_store, key: &apos;_quiver_session&apos; 12# config/initializers/cookies_serializer.rbRails.application.config.action_dispat">
+<meta property="og:description" content="ProcessesErlang is a concurrency-oriented programming language. Its unit of concurrency is the process (which has nothing to do with an Operating System process).Processes share no memory with one ano">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-03T08:27:01.000Z">
+<meta property="og:updated_time" content="2017-08-03T08:45:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rails Session">
-<meta name="twitter:description" content="12# config/initializers/session_store.rbRails.application.config.session_store :cookie_store, key: &apos;_quiver_session&apos; 12# config/initializers/cookies_serializer.rbRails.application.config.action_dispat">
+<meta name="twitter:title" content="Ping Pong Elixir">
+<meta name="twitter:description" content="ProcessesErlang is a concurrency-oriented programming language. Its unit of concurrency is the process (which has nothing to do with an Operating System process).Processes share no memory with one ano">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/11/rails-sessions/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/12/ping_pong_elixir/"/>
 
 
 
 
 
-  <title>Rails Session | TRADIS</title>
+  <title>Ping Pong Elixir | TRADIS</title>
   
 
 
@@ -259,7 +261,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/rails-sessions/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/12/ping_pong_elixir/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Will Wu">
@@ -276,7 +278,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Rails Session</h1>
+          <h1 class="post-title" itemprop="name headline">Ping Pong Elixir</h1>
         
 
         <div class="post-meta">
@@ -288,8 +290,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-11T20:46:25+08:00">
-                2017-05-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-12T19:02:01+08:00">
+                2017-07-12
               </time>
             
 
@@ -307,9 +309,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/05/11/rails-sessions/#comments" itemprop="discussionUrl">
+                <a href="/2017/07/12/ping_pong_elixir/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/05/11/rails-sessions/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/07/12/ping_pong_elixir/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -317,7 +319,7 @@
 
           
           
-             <span id="/2017/05/11/rails-sessions/" class="leancloud_visitors" data-flag-title="Rails Session">
+             <span id="/2017/07/12/ping_pong_elixir/" class="leancloud_visitors" data-flag-title="Ping Pong Elixir">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -345,63 +347,10 @@
       
 
       
-        <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/session_store.rb</span></div><div class="line">Rails.application.config.session_store <span class="symbol">:cookie_store</span>, <span class="symbol">key:</span> <span class="string">'_quiver_session'</span></div></pre></td></tr></table></figure>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/cookies_serializer.rb</span></div><div class="line">Rails.application.config.action_dispatch.cookies_serializer = <span class="symbol">:json</span></div></pre></td></tr></table></figure>
-<ul>
-<li>Rails stores session data inside a single cookie</li>
-<li>By default, the session data is turned into JSON</li>
-<li>Rails signs and encrypts the cookie</li>
-<li>The session key and serializer can be configured to be something different</li>
-</ul>
-<p>cookies are limited, only 4k(or ActionDispatch::Cookies::CookieOverflow)</p>
-<h3 id="How-do-you-keep-your-cookies-small"><a href="#How-do-you-keep-your-cookies-small" class="headerlink" title="How do you keep your cookies small?"></a>How do you keep your cookies small?</h3><ol>
-<li>Store the <code>data</code> in the cookie</li>
-<li>Store a <code>reference to the data</code> in the cookie</li>
-</ol>
-<h3 id="Creating-an-ActiveRecord-session"><a href="#Creating-an-ActiveRecord-session" class="headerlink" title="Creating an ActiveRecord session"></a>Creating an ActiveRecord session</h3><ol>
-<li>Generate a new random session id</li>
-<li>Turn the session hash into a string</li>
-<li>Save the id and data to a sessions table in your database</li>
-<li>Return the session id with Set-Cookie</li>
-</ol>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/initializers/session_store.rb</span></div><div class="line">Rails.application.config.session_store <span class="symbol">:active_record_store</span>, <span class="symbol">key:</span> <span class="string">'_quiver_session'</span></div></pre></td></tr></table></figure>
-<h3 id="Finding-an-ActiveRecord-session"><a href="#Finding-an-ActiveRecord-session" class="headerlink" title="Finding an ActiveRecord session"></a>Finding an ActiveRecord session</h3><ol>
-<li>Grab the session id out of the cookie</li>
-<li>Look up the session id in the database</li>
-<li>Grab the data associated with that id</li>
-<li><p>Turn the data back into the session hash</p>
-<ul>
-<li>CacheStore</li>
-<li>ActiveRecordStore</li>
-<li>RedisSessionStore</li>
-<li>MongoSessionStore</li>
-</ul>
-</li>
-</ol>
-<h4 id="Create-your-own-session-store"><a href="#Create-your-own-session-store" class="headerlink" title="Create your own session store"></a>Create your own session store</h4><ul>
-<li>find_session</li>
-<li>write_session</li>
-<li>delete_session</li>
-</ul>
-<h3 id="Two-kinds-of-session-store"><a href="#Two-kinds-of-session-store" class="headerlink" title="Two kinds of session store"></a>Two kinds of session store</h3><ul>
-<li>CookieStore: store all the data in the cookie</li>
-<li>Everything Else: store a pointer to data in the cookie</li>
-</ul>
-<h3 id="Which-session-store-is-right-for-you"><a href="#Which-session-store-is-right-for-you" class="headerlink" title="Which session store is right for you"></a>Which session store is right for you</h3><h5 id="Cookie-Store"><a href="#Cookie-Store" class="headerlink" title="Cookie Store"></a>Cookie Store</h5><p>pros</p>
-<ul>
-<li>No extra setup</li>
-<li>Syncs with the browser lifecycle<br>cons</li>
-<li>Can only store 4kb of data</li>
-<li>Risk of session relay attacks</li>
-</ul>
-<h5 id="CacheStore"><a href="#CacheStore" class="headerlink" title="CacheStore"></a>CacheStore</h5><p>pros</p>
-<ul>
-<li>You probably already have a cache</li>
-<li>Built into Rails</li>
-<li>Fast–usually kept in memory<br>cons</li>
-<li>Sessions and cache fight for space – sessions can get kicked out</li>
-<li>Reset your cache expires all sessions</li>
-</ul>
+        <h5 id="Processes"><a href="#Processes" class="headerlink" title="Processes"></a>Processes</h5><p>Erlang is a concurrency-oriented programming language. Its unit of concurrency is the process (which has nothing to do with an Operating System process).<br>Processes share no memory with one another, and can only communicate with each other via asynchronous messages.</p>
+<h5 id="Play-with-processes"><a href="#Play-with-processes" class="headerlink" title="Play with processes"></a>Play with processes</h5><p>ping.ex<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Ping</span></span> <span class="keyword">do</span></div><div class="line">  <span class="variable">@moduledoc</span> <span class="string">""</span><span class="string">"</span></div><div class="line">  "<span class="string">""</span></div><div class="line">  <span class="variable">@doc</span> <span class="string">""</span><span class="string">"</span></div><div class="line">  The pattern involves passing state into the await function from start, and then passing the state (potentially modified) into the recursive calls to await.</div><div class="line">  "<span class="string">""</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">start_link</span></span> <span class="keyword">do</span></div><div class="line">    await(<span class="number">0</span>)  <span class="comment"># encapsulating state in a process</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">defp</span> <span class="title">await</span></span>(count) <span class="keyword">do</span></div><div class="line">    receive <span class="keyword">do</span></div><div class="line">      &#123;<span class="symbol">:pong</span>, pid&#125; -&gt; send(pid, &#123;<span class="symbol">:ping</span>, <span class="keyword">self</span>()&#125;)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    IO.puts <span class="string">"ping received a pong <span class="subst">#&#123;count + <span class="number">1</span>&#125;</span> times"</span></div><div class="line">    await(count + <span class="number">1</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>pong.ex<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Pong</span></span> <span class="keyword">do</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">start_link</span></span> <span class="keyword">do</span></div><div class="line">    await(<span class="number">0</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">defp</span> <span class="title">await</span></span>(count) <span class="keyword">do</span></div><div class="line">    receive <span class="keyword">do</span></div><div class="line">      &#123;<span class="symbol">:ping</span>, pid&#125; -&gt; send(pid, &#123;<span class="symbol">:pong</span>, <span class="keyword">self</span>()&#125;)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    IO.puts <span class="string">"pong received a ping <span class="subst">#&#123;count + <span class="number">1</span>&#125;</span> times"</span></div><div class="line">    await(count+<span class="number">1</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>then<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iex -S mix <span class="comment"># get a console with mix application loaded</span></div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -431,9 +380,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Ruby/" rel="tag"># Ruby</a>
+            <a href="/tags/Concurrency/" rel="tag"># Concurrency</a>
           
-            <a href="/tags/Rails/" rel="tag"># Rails</a>
+            <a href="/tags/Elixir/" rel="tag"># Elixir</a>
           
         </div>
       
@@ -446,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/08/centos user list/" rel="next" title="centos user list">
-                <i class="fa fa-chevron-left"></i> centos user list
+              <a href="/2017/07/02/cocurrent_erlang/" rel="next" title="Concurrent Erlang Programing">
+                <i class="fa fa-chevron-left"></i> Concurrent Erlang Programing
               </a>
             
           </div>
@@ -455,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/18/ruby_value_object/" rel="prev" title="Rails Session">
-                Rails Session <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -593,7 +538,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-do-you-keep-your-cookies-small"><span class="nav-number">1.</span> <span class="nav-text">How do you keep your cookies small?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-an-ActiveRecord-session"><span class="nav-number">2.</span> <span class="nav-text">Creating an ActiveRecord session</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Finding-an-ActiveRecord-session"><span class="nav-number">3.</span> <span class="nav-text">Finding an ActiveRecord session</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Create-your-own-session-store"><span class="nav-number">3.1.</span> <span class="nav-text">Create your own session store</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Two-kinds-of-session-store"><span class="nav-number">4.</span> <span class="nav-text">Two kinds of session store</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Which-session-store-is-right-for-you"><span class="nav-number">5.</span> <span class="nav-text">Which session store is right for you</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Cookie-Store"><span class="nav-number">5.0.1.</span> <span class="nav-text">Cookie Store</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CacheStore"><span class="nav-number">5.0.2.</span> <span class="nav-text">CacheStore</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Processes"><span class="nav-number">1.</span> <span class="nav-text">Processes</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Play-with-processes"><span class="nav-number">2.</span> <span class="nav-text">Play with processes</span></a></li></ol></div>
             
 
           </div>
@@ -725,9 +670,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/05/11/rails-sessions/';
-          this.page.identifier = '2017/05/11/rails-sessions/';
-          this.page.title = 'Rails Session';
+          this.page.url = 'http://yoursite.com/2017/07/12/ping_pong_elixir/';
+          this.page.identifier = '2017/07/12/ping_pong_elixir/';
+          this.page.title = 'Ping Pong Elixir';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://airmacho.disqus.com/embed.js';

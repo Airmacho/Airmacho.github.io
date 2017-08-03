@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Erlang,Concurrency," />
 
 
 
@@ -95,16 +95,18 @@
 
 
 
-<meta name="description" content="To Infinity and Beyond">
-<meta property="og:type" content="website">
-<meta property="og:title" content="TRADIS">
-<meta property="og:url" content="http://yoursite.com/tags/Ruby/index.html">
+<meta name="description" content="Message-passing concurrencyDifferent concurrent processes “share nothing” and only communicate by passing messages. The “Actor Model” Everything is an actor actors communicate by messages actors can c">
+<meta name="keywords" content="Erlang,Concurrency">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Concurrent Erlang Programing">
+<meta property="og:url" content="http://yoursite.com/2017/07/02/cocurrent_erlang/index.html">
 <meta property="og:site_name" content="TRADIS">
-<meta property="og:description" content="To Infinity and Beyond">
+<meta property="og:description" content="Message-passing concurrencyDifferent concurrent processes “share nothing” and only communicate by passing messages. The “Actor Model” Everything is an actor actors communicate by messages actors can c">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-08-03T08:43:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TRADIS">
-<meta name="twitter:description" content="To Infinity and Beyond">
+<meta name="twitter:title" content="Concurrent Erlang Programing">
+<meta name="twitter:description" content="Message-passing concurrencyDifferent concurrent processes “share nothing” and only communicate by passing messages. The “Actor Model” Everything is an actor actors communicate by messages actors can c">
 
 
 
@@ -132,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Ruby/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/02/cocurrent_erlang/"/>
 
 
 
 
 
-  <title>Tag: Ruby | TRADIS</title>
+  <title>Concurrent Erlang Programing | TRADIS</title>
   
 
 
@@ -163,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,72 +249,197 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>Ruby<small>Tag</small>
-      </h1>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/18/ruby_value_object/" itemprop="url">
-              
-                <span itemprop="name">Rails Session</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-18T10:33:23+08:00"
-              content="2017-05-18" >
-          05-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/05/11/rails-sessions/" itemprop="url">
-              
-                <span itemprop="name">Rails Session</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-05-11T20:46:25+08:00"
-              content="2017-05-11" >
-          05-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </div>
 
   
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/02/cocurrent_erlang/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Will Wu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TRADIS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Concurrent Erlang Programing</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-02T01:33:00+08:00">
+                2017-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/07/02/cocurrent_erlang/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/07/02/cocurrent_erlang/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/07/02/cocurrent_erlang/" class="leancloud_visitors" data-flag-title="Concurrent Erlang Programing">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Message-passing-concurrency"><a href="#Message-passing-concurrency" class="headerlink" title="Message-passing concurrency"></a>Message-passing concurrency</h3><p>Different concurrent processes “share nothing” and only communicate by passing messages.</p>
+<h3 id="The-“Actor-Model”"><a href="#The-“Actor-Model”" class="headerlink" title="The “Actor Model”"></a>The “Actor Model”</h3><ul>
+<li>Everything is an actor</li>
+<li>actors communicate by messages</li>
+<li>actors can create actors</li>
+<li>and change behavior according to messages</li>
+</ul>
+<h3 id="Processes-versus-threads"><a href="#Processes-versus-threads" class="headerlink" title="Processes versus threads"></a>Processes versus threads</h3><p>In the virtual machine, not the operating system, like “green threads”, but</p>
+<ul>
+<li>more lightweight than threads</li>
+<li>more numerous</li>
+<li>more control: stack, heap and garbage collection per process</li>
+</ul>
+<h3 id="Synchronous-versus-asynchronous"><a href="#Synchronous-versus-asynchronous" class="headerlink" title="Synchronous versus asynchronous"></a>Synchronous versus asynchronous</h3><p>Message send message receive are decoupled.</p>
+<ul>
+<li>avoids a common source of deadlock</li>
+<li>directly supports processes distributed across a network</li>
+<li>supports more complex message handling</li>
+<li>can stimulate synchrony through send/receive protocol</li>
+</ul>
+<h3 id="Identifiers-versus-channels"><a href="#Identifiers-versus-channels" class="headerlink" title="Identifiers versus channels"></a>Identifiers versus channels</h3><p>Messages are sent to particular process id(PID), rather than along a channel between processes. - No need to set up channels between specific processes, just use PID.<br>The communication structure is less evident in program but supports dynamic system more readily. - Hard to recognize the communicating processes.<br>Named processes give more visible long-lived structures.</p>
+<h3 id="Concurrency-versus-parallelism"><a href="#Concurrency-versus-parallelism" class="headerlink" title="Concurrency versus parallelism"></a>Concurrency versus parallelism</h3><p>Concurrency means the possibility of running independently, perhaps at the same time.<br>On a single processing element, concurrent processes timeshare, mediate by a scheduler.<br>On multicore processor, there is - potentially at least - concurrent activity on each core, with each scheduled separately.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Erlang/" rel="tag"># Erlang</a>
+          
+            <a href="/tags/Concurrency/" rel="tag"># Concurrency</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/18/ruby_value_object/" rel="next" title="Rails Session">
+                <i class="fa fa-chevron-left"></i> Rails Session
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/12/ping_pong_elixir/" rel="prev" title="Ping Pong Elixir">
+                Ping Pong Elixir <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -320,6 +447,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -340,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -401,6 +548,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Message-passing-concurrency"><span class="nav-number">1.</span> <span class="nav-text">Message-passing concurrency</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-“Actor-Model”"><span class="nav-number">2.</span> <span class="nav-text">The “Actor Model”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Processes-versus-threads"><span class="nav-number">3.</span> <span class="nav-text">Processes versus threads</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Synchronous-versus-asynchronous"><span class="nav-number">4.</span> <span class="nav-text">Synchronous versus asynchronous</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Identifiers-versus-channels"><span class="nav-number">5.</span> <span class="nav-text">Identifiers versus channels</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Concurrency-versus-parallelism"><span class="nav-number">6.</span> <span class="nav-text">Concurrency versus parallelism</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -503,10 +666,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
@@ -524,6 +687,18 @@
       <script id="dsq-count-scr" src="https://airmacho.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/07/02/cocurrent_erlang/';
+          this.page.identifier = '2017/07/02/cocurrent_erlang/';
+          this.page.title = 'Concurrent Erlang Programing';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://airmacho.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

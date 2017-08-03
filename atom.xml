@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-03T08:27:01.000Z</updated>
+  <updated>2017-08-03T08:45:13.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,109 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ping Pong Elixir</title>
+    <link href="http://yoursite.com/2017/07/12/ping_pong_elixir/"/>
+    <id>http://yoursite.com/2017/07/12/ping_pong_elixir/</id>
+    <published>2017-07-12T11:02:01.000Z</published>
+    <updated>2017-08-03T08:45:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="Processes"><a href="#Processes" class="headerlink" title="Processes"></a>Processes</h5><p>Erlang is a concurrency-oriented programming language. Its unit of concurrency is the process (which has nothing to do with an Operating System process).<br>Processes share no memory with one another, and can only communicate with each other via asynchronous messages.</p>
+<h5 id="Play-with-processes"><a href="#Play-with-processes" class="headerlink" title="Play with processes"></a>Play with processes</h5><p>ping.ex<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Ping</span></span> <span class="keyword">do</span></div><div class="line">  <span class="variable">@moduledoc</span> <span class="string">""</span><span class="string">"</span></div><div class="line">  "<span class="string">""</span></div><div class="line">  <span class="variable">@doc</span> <span class="string">""</span><span class="string">"</span></div><div class="line">  The pattern involves passing state into the await function from start, and then passing the state (potentially modified) into the recursive calls to await.</div><div class="line">  "<span class="string">""</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">start_link</span></span> <span class="keyword">do</span></div><div class="line">    await(<span class="number">0</span>)  <span class="comment"># encapsulating state in a process</span></div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">defp</span> <span class="title">await</span></span>(count) <span class="keyword">do</span></div><div class="line">    receive <span class="keyword">do</span></div><div class="line">      &#123;<span class="symbol">:pong</span>, pid&#125; -&gt; send(pid, &#123;<span class="symbol">:ping</span>, <span class="keyword">self</span>()&#125;)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    IO.puts <span class="string">"ping received a pong <span class="subst">#&#123;count + <span class="number">1</span>&#125;</span> times"</span></div><div class="line">    await(count + <span class="number">1</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>pong.ex<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">defmodule</span> <span class="title">Pong</span></span> <span class="keyword">do</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">start_link</span></span> <span class="keyword">do</span></div><div class="line">    await(<span class="number">0</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">defp</span> <span class="title">await</span></span>(count) <span class="keyword">do</span></div><div class="line">    receive <span class="keyword">do</span></div><div class="line">      &#123;<span class="symbol">:ping</span>, pid&#125; -&gt; send(pid, &#123;<span class="symbol">:pong</span>, <span class="keyword">self</span>()&#125;)</div><div class="line">    <span class="keyword">end</span></div><div class="line">    IO.puts <span class="string">"pong received a ping <span class="subst">#&#123;count + <span class="number">1</span>&#125;</span> times"</span></div><div class="line">    await(count+<span class="number">1</span>)</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>then<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iex -S mix <span class="comment"># get a console with mix application loaded</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;Processes&quot;&gt;&lt;a href=&quot;#Processes&quot; class=&quot;headerlink&quot; title=&quot;Processes&quot;&gt;&lt;/a&gt;Processes&lt;/h5&gt;&lt;p&gt;Erlang is a concurrency-oriented programmi
+    
+    </summary>
+    
+    
+      <category term="Concurrency" scheme="http://yoursite.com/tags/Concurrency/"/>
+    
+      <category term="Elixir" scheme="http://yoursite.com/tags/Elixir/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Concurrent Erlang Programing</title>
+    <link href="http://yoursite.com/2017/07/02/cocurrent_erlang/"/>
+    <id>http://yoursite.com/2017/07/02/cocurrent_erlang/</id>
+    <published>2017-07-01T17:33:00.000Z</published>
+    <updated>2017-08-03T08:43:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Message-passing-concurrency"><a href="#Message-passing-concurrency" class="headerlink" title="Message-passing concurrency"></a>Message-passing concurrency</h3><p>Different concurrent processes “share nothing” and only communicate by passing messages.</p>
+<h3 id="The-“Actor-Model”"><a href="#The-“Actor-Model”" class="headerlink" title="The “Actor Model”"></a>The “Actor Model”</h3><ul>
+<li>Everything is an actor</li>
+<li>actors communicate by messages</li>
+<li>actors can create actors</li>
+<li>and change behavior according to messages</li>
+</ul>
+<h3 id="Processes-versus-threads"><a href="#Processes-versus-threads" class="headerlink" title="Processes versus threads"></a>Processes versus threads</h3><p>In the virtual machine, not the operating system, like “green threads”, but</p>
+<ul>
+<li>more lightweight than threads</li>
+<li>more numerous</li>
+<li>more control: stack, heap and garbage collection per process</li>
+</ul>
+<h3 id="Synchronous-versus-asynchronous"><a href="#Synchronous-versus-asynchronous" class="headerlink" title="Synchronous versus asynchronous"></a>Synchronous versus asynchronous</h3><p>Message send message receive are decoupled.</p>
+<ul>
+<li>avoids a common source of deadlock</li>
+<li>directly supports processes distributed across a network</li>
+<li>supports more complex message handling</li>
+<li>can stimulate synchrony through send/receive protocol</li>
+</ul>
+<h3 id="Identifiers-versus-channels"><a href="#Identifiers-versus-channels" class="headerlink" title="Identifiers versus channels"></a>Identifiers versus channels</h3><p>Messages are sent to particular process id(PID), rather than along a channel between processes. - No need to set up channels between specific processes, just use PID.<br>The communication structure is less evident in program but supports dynamic system more readily. - Hard to recognize the communicating processes.<br>Named processes give more visible long-lived structures.</p>
+<h3 id="Concurrency-versus-parallelism"><a href="#Concurrency-versus-parallelism" class="headerlink" title="Concurrency versus parallelism"></a>Concurrency versus parallelism</h3><p>Concurrency means the possibility of running independently, perhaps at the same time.<br>On a single processing element, concurrent processes timeshare, mediate by a scheduler.<br>On multicore processor, there is - potentially at least - concurrent activity on each core, with each scheduled separately.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Message-passing-concurrency&quot;&gt;&lt;a href=&quot;#Message-passing-concurrency&quot; class=&quot;headerlink&quot; title=&quot;Message-passing concurrency&quot;&gt;&lt;/a&gt;Messa
+    
+    </summary>
+    
+    
+      <category term="Erlang" scheme="http://yoursite.com/tags/Erlang/"/>
+    
+      <category term="Concurrency" scheme="http://yoursite.com/tags/Concurrency/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rails Session</title>
+    <link href="http://yoursite.com/2017/05/18/ruby_value_object/"/>
+    <id>http://yoursite.com/2017/05/18/ruby_value_object/</id>
+    <published>2017-05-18T02:33:23.000Z</published>
+    <updated>2017-08-03T08:41:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>A small simple object, like money or a date range, whose equality isn’t based on identity.</p>
+</blockquote>
+<p>to implement a value object following the above definition and rules:</p>
+<ul>
+<li>Value objects have multiple attributes</li>
+<li>Attributes should be immutable througout its life cycle</li>
+<li>Equality is determined by its attributes (and its type)</li>
+</ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Money</span></span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">==</span><span class="params">(other_money)</span></span></div><div class="line">    <span class="keyword">self</span>.<span class="keyword">class</span> == other_money.<span class="keyword">class</span> &amp;&amp;</div><div class="line">    amount == other_money.amount &amp;&amp;</div><div class="line">    currency == other_money.currency</div><div class="line">  <span class="keyword">end</span></div><div class="line">  <span class="keyword">alias</span> <span class="symbol">:eql?</span> <span class="symbol">:==</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hash</span></span></div><div class="line">    [@amount, @currency].hash</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div><div class="line"></div><div class="line">usd = Money.new(<span class="number">10</span>, <span class="string">'USD'</span>)</div><div class="line">usd2 = Money.new(<span class="number">10</span>, <span class="string">'USD'</span>)</div><div class="line">usd == usd2 <span class="comment"># =&gt; true</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;A small simple object, like money or a date range, whose equality isn’t based on identity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;to implement
+    
+    </summary>
+    
+    
+      <category term="Ruby" scheme="http://yoursite.com/tags/Ruby/"/>
+    
+  </entry>
   
   <entry>
     <title>Rails Session</title>
@@ -91,6 +194,36 @@
       <category term="Ruby" scheme="http://yoursite.com/tags/Ruby/"/>
     
       <category term="Rails" scheme="http://yoursite.com/tags/Rails/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos user list</title>
+    <link href="http://yoursite.com/2016/02/08/centos%20user%20list/"/>
+    <id>http://yoursite.com/2016/02/08/centos user list/</id>
+    <published>2016-02-08T13:16:22.000Z</published>
+    <updated>2017-08-03T08:39:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="centos-user-list"><a href="#centos-user-list" class="headerlink" title="centos user list"></a>centos user list</h1><p><strong>/etc/passwd</strong> file contains one line for each user account, with seven fields delimited by colons. This is a text file.</p>
+<p>Sample outputs:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">root:x:0:0:root:/root:/bin/bash</div><div class="line">daemon:x:1:1:daemon:/usr/sbin:/bin/sh</div><div class="line">bin:x:2:2:bin:/bin:/bin/sh</div><div class="line">sys:x:3:3:sys:/dev:/bin/sh</div><div class="line">sync:x:4:65534:sync:/bin:/bin/sync</div><div class="line">games:x:5:60:games:/usr/games:/bin/sh</div><div class="line">man:x:6:12:man:/var/cache/man:/bin/sh</div><div class="line">....</div><div class="line">....</div></pre></td></tr></table></figure>
+<p>The first field is username. So root, daemon, bin, sync, games, etc all are usernames. It is used when user logs in. It should be between 1 and 32 characters in length.</p>
+<p>To list only usernames type the following awk command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ awk -F<span class="string">':'</span> <span class="string">'&#123; print $1&#125;'</span> /etc/passwd</div></pre></td></tr></table></figure>
+<p>Each user has numberical user ID called UID. It is defined in /etc/passwd file. The UID for each user is automatically selected using /etc/login.defs file when you use <code>useradd</code> command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ grep <span class="string">"^UID_MIN"</span> /etc/login.defs</div><div class="line">$ grep UID_MIN /etc/login.defs</div><div class="line">=&gt; UID_MIN			500</div><div class="line">$ grep “^UID_MAX” /etc/login.defs</div><div class="line">=&gt; UID_MAX			60000</div></pre></td></tr></table></figure>
+<p>In other words all normal system users must have UID >= 1000 (MIN) and UID \\&lt;= 60000 (MAX) and only those users are allowed to login into system if shell is bash/csh/tcsh/ksh etc as defined /etc/shells file</p>
+<p>/sbin/nologin is used to politely refuse a login i.e. /sbin/nologin displays a message that an account is not available and exits non-zero. It is intended as a replacement shell field for accounts that have been disabled or you do not want user to login into system using ssh.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;centos-user-list&quot;&gt;&lt;a href=&quot;#centos-user-list&quot; class=&quot;headerlink&quot; title=&quot;centos user list&quot;&gt;&lt;/a&gt;centos user list&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;/etc/p
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   

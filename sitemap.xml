@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/07/12/ping_pong_elixir/</loc>
+    
+    <lastmod>2017-08-03T08:45:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/02/cocurrent_erlang/</loc>
+    
+    <lastmod>2017-08-03T08:43:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/05/18/ruby_value_object/</loc>
+    
+    <lastmod>2017-08-03T08:41:47.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/02/08/centos%20user%20list/</loc>
+    
+    <lastmod>2017-08-03T08:39:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/05/11/rails-sessions/</loc>
     
     <lastmod>2017-08-03T08:27:01.000Z</lastmod>
