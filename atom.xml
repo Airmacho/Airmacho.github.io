@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-03T08:45:13.000Z</updated>
+  <updated>2017-10-06T14:19:49.416Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/10/06/don&#39;t%20trust%20uniqueness%20validation/"/>
+    <id>http://yoursite.com/2017/10/06/don&#39;t trust uniqueness validation/</id>
+    <published>2017-10-06T14:19:48.456Z</published>
+    <updated>2017-10-06T14:19:49.416Z</updated>
+    
+    <content type="html"><![CDATA[<p>Rails does many things, but data integrity validations are not one of them. Your relational database is designed to enforce data integrity; let it.</p>
+<p>References:</p>
+<p><a href="https://medium.com/@igorkhomenko/rails-make-sure-you-have-proper-db-indexes-for-your-models-unique-validations-ffd0364df26f" target="_blank" rel="external">Rails: make sure you have proper DB indexes for your model’s unique validations</a></p>
+<p><a href="https://robots.thoughtbot.com/the-perils-of-uniqueness-validations" target="_blank" rel="external">The Perils of Uniqueness Validations</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Rails does many things, but data integrity validations are not one of them. Your relational database is designed to enforce data integrit
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Ping Pong Elixir</title>
